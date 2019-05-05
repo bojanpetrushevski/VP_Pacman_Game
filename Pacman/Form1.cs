@@ -74,6 +74,8 @@ namespace Pacman
             {
                if (Math.Abs(obstacle.X - o.X) <= 3 && Math.Abs(obstacle.Y - o.Y) <= 1)
                     return false;
+                if (Pacman.PosY == obstacle.Y && (Pacman.PosX == obstacle.X || Pacman.PosX == obstacle.X + 1 || Pacman.PosX == obstacle.X + 2))
+                    return false;
             }
             return true;
         }
@@ -148,7 +150,5 @@ namespace Pacman
                 Pacman.ChangeDirection(DIRECTION.RIGHT);
             Invalidate();
         }
-
-       
     }
 }
