@@ -1,0 +1,10 @@
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.csprojAssemblyReference.cache
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.Form1.resources
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.Properties.Resources.resources
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.csproj.GenerateResource.cache
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.csproj.CoreCompileInputs.cache
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\bin\Debug\Pacman.exe.config
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\bin\Debug\Pacman.exe
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\bin\Debug\Pacman.pdb
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.exe
+C:\Users\Bojan\source\repos\Laboratoriski 5\Pacman\Pacman\obj\Debug\Pacman.pdb
