@@ -10,9 +10,8 @@ namespace Pacman
 {
     public class Obstacle
     {
-        public Point StartPoint { set; get; }
-        public int StartX { set; get; }
-        public int StartY { set; get; }
+        public int X { set; get; }
+        public int Y { set; get; }
         public Pen RedPen { set; get; }
         public Random PositionGenerator { set; get; }
         public Image foodImage { set; get; }
@@ -25,12 +24,12 @@ namespace Pacman
         }
         public void GeneratePosition()
         {
-            StartX = PositionGenerator.Next(8);
-            StartY = PositionGenerator.Next(15);
+            X = PositionGenerator.Next(8);
+            Y = PositionGenerator.Next(15);
         }
         public void Draw(Graphics g)
         {
-            g.DrawRectangle(RedPen, StartY * Pacman.RADIUS * 2 + ((Pacman.RADIUS * 2 - foodImage.Height) / 2) - 5, StartX * Pacman.RADIUS * 2 + ((Pacman.RADIUS * 2 - foodImage.Width) / 2) - 10, 30, 120);
+            g.DrawRectangle(RedPen, Y * Pacman.RADIUS * 2 + ((Pacman.RADIUS * 2 - foodImage.Height) / 2) + 5, X * Pacman.RADIUS * 2 + ((Pacman.RADIUS * 2 - foodImage.Width) / 2) + 2 , 30, 115);
         }
     }
 }

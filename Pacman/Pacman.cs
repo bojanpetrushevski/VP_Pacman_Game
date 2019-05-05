@@ -38,6 +38,7 @@ namespace Pacman
             // vasiot kod ovde
             Direction = direction;
             SetStartAngle();
+
         }
         public void SetStartAngle()
         {
@@ -50,19 +51,32 @@ namespace Pacman
             if (Direction == DIRECTION.RIGHT)
                 StartAngle = ANGLE.RIGHT_START_ANGLE;
         }
-        public void Move(int Width, int Height)
+        public void Move(int Width, int Height, List<Obstacle> Obstacles)
         {
             // vasiot kod ovde
             if(Direction == DIRECTION.UP)
                 PosX--;
             if(Direction == DIRECTION.DOWN)
-                PosX++;
+                PosX++;  
             if (Direction == DIRECTION.LEFT)
                 PosY--;
             if (Direction == DIRECTION.RIGHT)
-                PosY++;
+                PosY++;    
             CheckOutOfBounds(Width, Height);
+            if (!CheckCollision(Obstacles))
+                FixPosition();
             IsMouthOpen = !IsMouthOpen;
+        }
+        public void FixPosition()
+        {
+            if (Direction == DIRECTION.UP)
+                PosX++;
+            if (Direction == DIRECTION.DOWN)
+                PosX--;
+            if (Direction == DIRECTION.LEFT)
+                PosY++;
+            if (Direction == DIRECTION.RIGHT)
+                PosY--;
         }
         public void CheckOutOfBounds(int Width, int Height)
         {
@@ -75,9 +89,14 @@ namespace Pacman
             else if (PosY > Width - 1)
                 PosY = 0;
         }
-        public void checkCollision()
+        public bool CheckCollision(List<Obstacle> Obstacles)
         {
-
+            foreach(Obstacle Obstacle in Obstacles)
+            {
+                if (PosY == Obstacle.Y && (PosX == Obstacle.X || PosX == Obstacle.X + 1 || PosX == Obstacle.X + 2))
+                    return false;
+            }
+            return true;
         }
         public void Draw(Graphics g)
         {
